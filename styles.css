@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background: #111;
+}
+
+#c {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* --- BOTÓN ANIMADO --- */
+.animated-btn {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px 30px;
+  font-size: 22px;
+  border: none;
+  border-radius: 12px;
+  background: #ff0066;
+  color: white;
+  cursor: pointer;
+  display: none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  box-shadow: 0 0 15px #ff0066;
+  animation: pulse 1.5s infinite ease-in-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.animated-btn:hover,
+.animated-btn:active {
+  transform: translateX(-50%) scale(1.15);
+  box-shadow: 0 0 25px #ff3385;
+}
+
+/* Animación del botón */
+@keyframes pulse {
+  0% {
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.08);
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
+}
